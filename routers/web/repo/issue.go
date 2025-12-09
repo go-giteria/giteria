@@ -52,6 +52,12 @@ const (
 
 // IssueTemplateCandidates issue templates
 var IssueTemplateCandidates = []string{
+	".giteria/ISSUE_TEMPLATE.md",
+	".giteria/ISSUE_TEMPLATE.yaml",
+	".giteria/ISSUE_TEMPLATE.yml",
+	".giteria/issue_template.md",
+	".giteria/issue_template.yaml",
+	".giteria/issue_template.yml",
 	"ISSUE_TEMPLATE.md",
 	"ISSUE_TEMPLATE.yaml",
 	"ISSUE_TEMPLATE.yml",

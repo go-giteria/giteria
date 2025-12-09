@@ -33,7 +33,7 @@ import (
 //
 // FIXME: There has to be a more efficient way of doing this
 func findReadmeFileInEntries(ctx *context.Context, parentDir string, entries []*git.TreeEntry, tryWellKnownDirs bool) (string, *git.TreeEntry, error) {
-	docsEntries := make([]*git.TreeEntry, 3) // (one of docs/, .gitea/ or .github/)
+	docsEntries := make([]*git.TreeEntry, 4) // (one of docs/, .giteria/, .gitea/ or .github/)
 	for _, entry := range entries {
 		if tryWellKnownDirs && entry.IsDir() {
 			// as a special case for the top-level repo introduction README,
@@ -45,13 +45,17 @@ func findReadmeFileInEntries(ctx *context.Context, parentDir string, entries []*
 				if entry.Name() == "docs" || docsEntries[0] == nil {
 					docsEntries[0] = entry
 				}
-			case ".gitea":
-				if entry.Name() == ".gitea" || docsEntries[1] == nil {
+			case ".giteria":
+				if entry.Name() == ".giteria" || docsEntries[1] == nil {
 					docsEntries[1] = entry
 				}
-			case ".github":
-				if entry.Name() == ".github" || docsEntries[2] == nil {
+			case ".gitea":
+				if entry.Name() == ".gitea" || docsEntries[2] == nil {
 					docsEntries[2] = entry
+				}
+			case ".github":
+				if entry.Name() == ".github" || docsEntries[3] == nil {
+					docsEntries[3] = entry
 				}
 			}
 		}

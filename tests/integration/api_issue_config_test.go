@@ -113,6 +113,8 @@ func TestAPIRepoIssueConfigPaths(t *testing.T) {
 	owner := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: repo.OwnerID})
 
 	templateConfigCandidates := []string{
+		".giteria/ISSUE_TEMPLATE/config",
+		".giteria/issue_template/config",
 		".gitea/ISSUE_TEMPLATE/config",
 		".gitea/issue_template/config",
 		".github/ISSUE_TEMPLATE/config",

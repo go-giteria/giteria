@@ -41,12 +41,16 @@ func IsWorkflow(path string) bool {
 		return false
 	}
 
-	return strings.HasPrefix(path, ".gitea/workflows") || strings.HasPrefix(path, ".github/workflows")
+	return strings.HasPrefix(path, ".giteria/workflows") || strings.HasPrefix(path, ".gitea/workflows") || strings.HasPrefix(path, ".github/workflows")
 }
 
 func ListWorkflows(commit *git.Commit) (string, git.Entries, error) {
-	rpath := ".gitea/workflows"
+	rpath := ".giteria/workflows"
 	tree, err := commit.SubTree(rpath)
+	if _, ok := err.(git.ErrNotExist); ok {
+		rpath = ".gitea/workflows"
+		tree, err = commit.SubTree(rpath)
+	}
 	if _, ok := err.(git.ErrNotExist); ok {
 		rpath = ".github/workflows"
 		tree, err = commit.SubTree(rpath)

@@ -21,6 +21,8 @@ import (
 
 // templateDirCandidates issue templates directory
 var templateDirCandidates = []string{
+	".giteria/ISSUE_TEMPLATE",
+	".giteria/issue_template",
 	"ISSUE_TEMPLATE",
 	"issue_template",
 	".gitea/ISSUE_TEMPLATE",
@@ -32,6 +34,8 @@ var templateDirCandidates = []string{
 }
 
 var templateConfigCandidates = []string{
+	".giteria/ISSUE_TEMPLATE/config",
+	".giteria/issue_template/config",
 	".gitea/ISSUE_TEMPLATE/config",
 	".gitea/issue_template/config",
 	".github/ISSUE_TEMPLATE/config",

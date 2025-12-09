@@ -43,7 +43,7 @@ type ReviewRequestNotifier struct {
 	ReviewTeam *org_model.Team
 }
 
-var codeOwnerFiles = []string{"CODEOWNERS", "docs/CODEOWNERS", ".gitea/CODEOWNERS"}
+var codeOwnerFiles = []string{"CODEOWNERS", "docs/CODEOWNERS", ".giteria/CODEOWNERS", ".gitea/CODEOWNERS"}
 
 func IsCodeOwnerFile(f string) bool {
 	return slices.Contains(codeOwnerFiles, f)

@@ -60,6 +60,12 @@ const (
 )
 
 var pullRequestTemplateCandidates = []string{
+	".giteria/PULL_REQUEST_TEMPLATE.md",
+	".giteria/PULL_REQUEST_TEMPLATE.yaml",
+	".giteria/PULL_REQUEST_TEMPLATE.yml",
+	".giteria/pull_request_template.md",
+	".giteria/pull_request_template.yaml",
+	".giteria/pull_request_template.yml",
 	"PULL_REQUEST_TEMPLATE.md",
 	"PULL_REQUEST_TEMPLATE.yaml",
 	"PULL_REQUEST_TEMPLATE.yml",
