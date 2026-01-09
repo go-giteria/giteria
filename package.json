@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "next": "15.5.4",
-    "react": "19.1.0",
+    "react": "19.2.3",
     "react-dom": "19.1.0",
     "@primer/octicons": "19.21.1",
     "clsx": "^2.0.0",
